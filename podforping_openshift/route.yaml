@@ -1,0 +1,33 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  annotations:
+    openshift.io/host.generated: "true"
+  creationTimestamp: "2022-12-12T14:37:55Z"
+  labels:
+    app: podforping
+    app.kubernetes.io/component: podforping
+    app.kubernetes.io/instance: podforping
+  name: podforping
+  namespace: samuelausbildung
+  resourceVersion: "1566673"
+  uid: 561c90d9-b4ff-4834-961c-6a2c6a494c1d
+spec:
+  host: podforping-samuelausbildung.apps.ocp4.example.com
+  port:
+    targetPort: 8080-tcp
+  to:
+    kind: Service
+    name: podforping
+    weight: 100
+  wildcardPolicy: None
+status:
+  ingress:
+  - conditions:
+    - lastTransitionTime: "2022-12-12T14:37:55Z"
+      status: "True"
+      type: Admitted
+    host: podforping-samuelausbildung.apps.ocp4.example.com
+    routerCanonicalHostname: router-default.apps.ocp4.example.com
+    routerName: default
+    wildcardPolicy: None

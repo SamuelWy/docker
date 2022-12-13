@@ -1,0 +1,15 @@
+apiVersion: v1
+data:
+  example.property.1: hello
+  example.property.2: world
+  example.property.file: |-
+    property.1=value-1
+    property.2=value-2
+    property.3=value-3
+kind: ConfigMap
+metadata:
+  creationTimestamp: "2022-12-13T12:02:42Z"
+  name: example
+  namespace: samuelausbildung
+  resourceVersion: "1664167"
+  uid: 7a7d65f9-9cb7-4b6b-9f3b-918304b699fd
