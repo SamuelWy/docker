@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: Deployment
+metadata:
+  name: turtle
+  namespace: default
+spec:
+  containers:
+  - image: nginx:stable
+    replicas: 3
